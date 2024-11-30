@@ -1,39 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StockWise</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockWise</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>StockWise</h1>
-      <div id="alert" class="alert" style="display: none;">⚠️ Low Stock Notification</div>
-    </header>
-    <main>
-      <div class="card" id="iphone16">
-        <p>Low stock: iPhone 16 Pro</p>
-        <div class="stock-bar red"></div>
-        <button class="update-stock-btn">Update Stock</button>
-      </div>
-      <div class="card" id="macbookM2">
-        <p>10 units left: MacBook Pro M2</p>
-        <div class="stock-bar yellow"></div>
-        <button class="update-stock-btn">Update Stock</button>
-      </div>
-      <div class="card" id="airpods">
-        <p>Good Quantity: AirPods</p>
-        <div class="stock-bar green"></div>
-        <button class="update-stock-btn">Update Stock</button>
-      </div>
-    </main>
-    <footer>
-      <input type="text" id="search" placeholder="Search your inventory...">
-      <button id="reset-stock-btn">Reset All Stocks</button>
-    </footer>
-  </div>
-  <script src="script.js"></script>
+    <div class="header">
+        <h1>StockWise</h1>
+    </div>
+    <div class="notification" id="notification-bar"></div>
+    <div class="form-container">
+        <form id="item-form">
+            <input type="text" id="item-name" placeholder="Item Name" required>
+            <input type="number" id="item-quantity" placeholder="Quantity" required>
+            <textarea id="item-description" placeholder="Description" required></textarea>
+            <button type="submit">Add Item</button>
+        </form>
+    </div>
+    <div class="inventory-container" id="inventory-container"></div>
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search your inventory...">
+        <button id="search-button">🔍</button>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
+
